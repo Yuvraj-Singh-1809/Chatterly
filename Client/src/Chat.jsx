@@ -22,7 +22,7 @@ export default function Chat(){
     },[]);
 
      function connectToWs(){
-      const ws=  new WebSocket("ws://localhost:3000");
+      const ws=  new WebSocket("ws://chatterly-yt36.onrender.com");
       setWs(ws);
       ws.addEventListener("message",handleMessage);
       ws.addEventListener("close",()=>{
