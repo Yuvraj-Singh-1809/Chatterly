@@ -26,9 +26,10 @@ app.use("/uploads",express.static(`${__dirname}/uploads`));
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(cookieParser());
+app.options('*', cors());
 
 app.use(cors({
-  origin: process.env.CLIENT_URL,
+  origin: "https://chatterly-web.onrender.com",
   credentials: true
 }));
 
