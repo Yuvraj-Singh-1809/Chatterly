@@ -26,11 +26,13 @@ app.use("/uploads",express.static(`${__dirname}/uploads`));
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(cookieParser());
-app.options('*', cors());
+
 
 app.use(cors({
-  origin: "https://chatterly-web.onrender.com",
-  credentials: true
+  origin: 'https://chatterly-web.onrender.com',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true // if you need to send cookies or authentication headers
 }));
 
 const jwtsecret=process.env.JWT_SECRET;
