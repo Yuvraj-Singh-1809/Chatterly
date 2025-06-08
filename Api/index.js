@@ -130,7 +130,7 @@ app.post("/register",async(req,res)=>
     res.cookie("token",token,{sameSite:"none",secure:true}).status(201).json({id: createdUser._id});
    });
 });
-const server =app.listen(3000,()=>{
+const server =app.listen(process.env.PORT || 3000,()=>{
     console.log("Server started on port 3000");
     
 });
