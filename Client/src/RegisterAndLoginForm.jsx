@@ -27,7 +27,7 @@ return(
              type="password" placeholder="password" 
              className="bg-white block w-full rounded-sm p-2 mb-2 border border-gray-200 focus:outline-blue-400 "/>
 
-            <button type="submit" className="bg-blue-500 text-white block w-full rounded-sm p-2">
+            <button type="submit" className="bg-blue-500 text-white block w-full rounded-sm p-2 cursor-pointer">
                 {isLoginOrRegister==="register" ? "Register" : "Login"}
             </button>
             <div className="text-center mt-2">
